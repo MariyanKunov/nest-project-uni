@@ -12,7 +12,9 @@ export class Student {
   @Column('text')
   description: string;
 
-  @ManyToOne(() => University, university => university.students)
+  @ManyToOne(() => University, university => university.students, {
+    eager: true
+  })
   university: University;
 
 }

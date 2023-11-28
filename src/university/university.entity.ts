@@ -9,7 +9,7 @@ export class University {
   @Column({ length: 500 })
   name: string;
 
-  @OneToMany(() => Student, student => student.university)
+  @OneToMany(() => Student, (students) => students.university)
   students: Student[];
 
 }
